@@ -50,12 +50,11 @@ Documentatie
 * Cum functionaza aplicatia FLASK?
 * Ce sunt rutele si functiile view si cum se folosesc?
 * Explicare tipuri de date fundamentale, instructiuini control flux executie
-
-
-#comentariu test branch merge + pull-request
 * Explicare access variabila 'request'
 * Explicare 'url_for'
 
 
 Medode verificare
 ================================
+
+#comentariu test branch merge + pull-request
