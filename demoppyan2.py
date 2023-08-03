@@ -1,6 +1,9 @@
 from flask import Flask, request, url_for
+from grafice.exemplu_func_grad_2 import valori_x, valori_y, genereaza_grafice
 from date_intrare_proiect import *
 import functiilib
+
+import threading
 
 # Logging - utilizare pachet logging
 
@@ -11,7 +14,9 @@ app = Flask(__name__)
 def index():
     ret = "<h1>Exemplu Proiect Python Pentru Studentii din anul II</h1>"
     
-    ret += "<a href=" + url_for("salut") + ">Salut</a>"
+    ret += "<a href=" + url_for("salut") + ">Salut</a>" + "<br/>" 
+    
+    ret += "<a href=" + url_for("grafic_x_patrat") + ">Grafice functie grad 2</a>" + "<br/>"
     
     return ret
 
@@ -86,6 +91,30 @@ def afisare_date_intrare():
 @app.route('/dict_nume')
 def nume_dict():
     return functiilib.ia_nume_din_dict()
+    
+# Exemple grafice functi de grad 2
+@app.route('/xpatrat')
+def grafic_x_patrat():
+
+    genereaza_grafice(valori_x, valori_y, "static/imagini")
+    #t1 = threading.Thread(target=genereaza_grafice, args = (valori_x, valori_y, "static/imagini"))
+    #t1.start()
+    #t1.join()
+    ret = f"<a href={url_for('index')}>Acasa</a><br/>"
+    
+    ret += "valori x: " + str(valori_x) + "<br/>"
+    ret += "valori y = x*x: " + str(valori_y) + "<br/>"
+    
+    ret += f'<img src={url_for("static", filename="imagini/afisare_cu_punct.png")}>' + "<br/>"
+    ret += f'<img src={url_for("static", filename="imagini/afisare_cu_steluta.png")}>' + "<br/>"
+    ret += f'<img src={url_for("static", filename="imagini/afisare_cu_x.png")}>' + "<br/>"
+    ret += f'<img src={url_for("static", filename="imagini/grafic_continuu_v1.png")}>' + "<br/>"
+    ret += f'<img src={url_for("static", filename="imagini/grafic_continuu_v2.png")}>' + "<br/>"
+    
+    
+    return ret
+    
+
 
 if __name__ == "__main__":
     app.run(debug=1)
