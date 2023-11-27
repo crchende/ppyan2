@@ -12,8 +12,8 @@ afisate imediat ce sunt generate.
 Pentru a continua, inchideti fereastra care se deschide automat
 in timpul executiei.
 
-Imaginile cu graficele sunt salvate in directorul imagini din 
-acest director.
+Imaginile cu graficele sunt salvate in directorul static/imagini din 
+acest repository.
 
 
 Fisierul este astfel construit incat sa poata fi folosit ca librarie.
