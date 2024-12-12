@@ -39,7 +39,8 @@ Ce ar mai trebui facut
 * ??? Afisare grafica - a unei serii de date in CSV
 *
 * Utilizare template-uri pentru a genera continutul, nu sa-l generam in functiile 'view' 
-* 
+
+  
 EXERCITII
 ================================
 * De adaugat in fiecare pagina - pe modelul '/' si '/salut' de link-uri catre toate URL-urile din aplicatie
@@ -55,3 +56,5 @@ Documentatie
 
 Medode verificare
 ================================
+
+#comentariu test branch merge + pull-request
