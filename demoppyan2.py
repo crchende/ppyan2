@@ -115,6 +115,5 @@ def grafic_x_patrat():
     return ret
     
 
-
 if __name__ == "__main__":
     app.run(debug=1)

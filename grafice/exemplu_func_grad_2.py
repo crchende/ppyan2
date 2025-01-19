@@ -25,6 +25,7 @@ def genereaza_grafice(x, y, locatie_imagini):
     print("afisare obiect fig1 (reprezentarea interna, nu imagine)", fig1, type(fig1))
     # salvare sub forma de jpg
     if __name__ == "__main__":
+        print("**************************************")
         plt.show() # de comentat daca nu vrem sa se intrerupa executia si sa se afiseze graficul
     fig1.figure.savefig(f'{locatie_imagini}/afisare_cu_x.png')
     plt.close()
@@ -80,7 +81,7 @@ def genereaza_grafice(x, y, locatie_imagini):
 # Cand este folosit ca librarie, n-am vrea sa si executam functia.
 # Acest lucru va fi facut de programul care foloseste libraria
 if __name__ == "__main__":
-    genereaza_grafice(valori_x, valori_y, "imagini")
+    genereaza_grafice(valori_x, valori_y, "../static/imagini")
     
 
 
